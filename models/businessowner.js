@@ -11,20 +11,20 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       BusinessOwner.hasMany(models.BusinessRequirementRaw, {
         foreignKey: 'businessOwnerId',
-        as: 'businessOwner',
+        as: 'businessRequirementsRaw',
       });
       BusinessOwner.hasMany(models.ApproveRequirements, {
         foreignKey: 'businessOwnerId',
-        as: 'businessOwner',
+        as: 'approveRequirements',
       });
       BusinessOwner.hasMany(models.Project, {
         foreignKey: 'businessOwnerId',
-        as: 'businessOwner',
+        as: 'projects',
       });
       BusinessOwner.hasMany(models.ReleaseVersion, {
         foreignKey: 'businessOwnerId',
-        as: 'businessOwner',
-      })
+        as: 'releaseVersions',
+      });
     }
   }
   BusinessOwner.init(

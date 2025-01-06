@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       });
       Project.belongsTo(models.Team, {
         foreignKey: 'teamId',
-        as: 'projects',
+        as: 'teams',
       });
 
       Project.hasMany(models.UserProject, {

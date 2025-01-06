@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'businessRequirementRawId',
         as: 'businessRequirementRaws',
       });
-      comment.belongsTo(models.BusinessRequirement, {
+      comment.belongsTo(models.WorkItem, {
         foreignKey: 'workItemId',
         as: 'workItems',
       });
